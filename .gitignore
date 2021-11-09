@@ -1,0 +1,11 @@
+.vscode
+.idea
+node_modules
+
+
+lerna-debug.log
+
+.history
+
+packages/**/node_modules
+packages/**/package-lock.json

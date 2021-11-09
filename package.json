@@ -1,0 +1,17 @@
+{
+  "name": "dpd-cli",
+  "version": "1.0.0",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"dpd cli\""
+  },
+  "keywords": [],
+  "author": "dpd",
+  "license": "ISC",
+  "description": "cli",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
