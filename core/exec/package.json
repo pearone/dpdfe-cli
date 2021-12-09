@@ -1,6 +1,6 @@
 {
   "name": "@dpd-cli/exec",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "> dpd-cli exec",
   "author": "pearone",
   "homepage": "https://github.com/pearone/dpd-cli#readme",
@@ -27,8 +27,8 @@
     "url": "https://github.com/pearone/dpd-cli/issues"
   },
   "dependencies": {
-    "@dpd-cli/package": "file:../../models/package",
     "@dpd-cli/log": "file:../../utils/log",
+    "@dpd-cli/package": "file:../../models/package",
     "@dpd-cli/utils": "file:../../utils/utils"
   }
 }

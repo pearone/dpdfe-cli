@@ -1,6 +1,6 @@
 {
   "name": "@dpd-cli/command",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "dpd-cli command",
   "author": "pearone <1181019452@qq.com>",
   "homepage": "https://github.com/pearone/dpd-cli#readme",
@@ -27,8 +27,8 @@
     "url": "https://github.com/pearone/dpd-cli/issues"
   },
   "dependencies": {
+    "@dpd-cli/log": "file:../../utils/log",
     "colors": "^1.4.0",
-    "semver": "^7.3.5",
-    "@dpd-cli/log": "file:../../utils/log"
+    "semver": "^7.3.5"
   }
 }

@@ -23,8 +23,8 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@dpd-cli/get-npm-info": "file:../../utils/get-npm-info",
     "@dpd-cli/exec": "file:../exec",
+    "@dpd-cli/get-npm-info": "file:../../utils/get-npm-info",
     "@dpd-cli/log": "file:../../utils/log",
     "colors": "^1.4.0",
     "commander": "^6.2.1",
