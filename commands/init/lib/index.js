@@ -13,7 +13,7 @@ const Package = require("@dpd-cli/package");
 const { Spinner, sleep, spawnAsync } = require("@dpd-cli/utils");
 const getTemplateRequest = require("./get-template-request");
 
-const constants = require("../../../constants");
+const DEFAULT_CLI_HOME = ".dpd-cli";
 
 const TYPE_PROJECT = "project";
 const TYPE_COMPONENT = "component";
@@ -221,14 +221,10 @@ class InitCommand extends Command {
       (item) => item.name === projectTemplate
     );
     this.templateInfo = templateInfo;
-    const targetPath = path.resolve(
-      userHome,
-      constants.DEFAULT_CLI_HOME,
-      "template"
-    );
+    const targetPath = path.resolve(userHome, DEFAULT_CLI_HOME, "template");
     const storeDir = path.resolve(
       userHome,
-      constants.DEFAULT_CLI_HOME,
+      DEFAULT_CLI_HOME,
       "template",
       "node_modules"
     );

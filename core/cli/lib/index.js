@@ -12,7 +12,7 @@ const userHome = require("user-home");
 const pathExists = require("path-exists").sync;
 const { Command } = require("commander");
 
-const constants = require("../../../constants");
+const constants = require("../constants");
 const pkg = require("../package.json");
 
 const program = new Command();
