@@ -73,6 +73,20 @@ async function getNpmSemverVersion(baseVersion, npmName, registry) {
 }
 
 /**
+ * 获取npm包最新的版本号
+ * @param {string} npmName
+ * @param {string} registry
+ */
+async function getNpmLatestVersion(npmName, registry) {
+  let versions = await getNpmVersions(npmName, registry);
+  if (versions && versions.length > 0) {
+    return versions.sort((a, b) => semver.gt(a, b))[0];
+  } else {
+    return null;
+  }
+}
+
+/**
  * 默认链接
  */
 function getDefaultRegistry(isOriginal = false) {
@@ -81,4 +95,10 @@ function getDefaultRegistry(isOriginal = false) {
     : "https://registry.npm.taobao.org";
 }
 
-module.exports = { getNpmInfo, getNpmVersions, getNpmSemverVersion };
+module.exports = {
+  getNpmInfo,
+  getNpmVersions,
+  getNpmSemverVersion,
+  getDefaultRegistry,
+  getNpmLatestVersion,
+};

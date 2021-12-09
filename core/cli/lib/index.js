@@ -7,25 +7,83 @@ const path = require("path");
 const semver = require("semver");
 const colors = require("colors/safe");
 const log = require("@dpd-cli/log");
+const exec = require("@dpd-cli/exec");
 const userHome = require("user-home");
 const pathExists = require("path-exists").sync;
+const { Command } = require("commander");
 
-const constants = require("./constants");
+const constants = require("../../../constants");
 const pkg = require("../package.json");
 
-let args;
+const program = new Command();
 
 async function core() {
   try {
-    checkPkgVersion();
-    checkNodeVersion();
-    checkRoot();
-    checkUserHome();
-    checkInputArgs();
-    checkEnv();
-    await checkGlobalUpdate();
+    await prepare();
+    registerCommand();
   } catch (e) {
     log.error(e.message);
+    if (process.env.LOG_LEVEL === "verbose") {
+      console.log(e);
+    }
+  }
+}
+
+async function prepare() {
+  checkPkgVersion();
+  checkRoot();
+  checkUserHome();
+  // checkInputArgs();
+  checkEnv();
+  // await checkGlobalUpdate();
+}
+
+/**
+ * 注册脚手架
+ */
+function registerCommand() {
+  program
+    .name(Object.keys(pkg.bin)[0])
+    .usage("<command> [options]")
+    .version(pkg.version)
+    .option("-d --debug", "是否开启调试模式", false)
+    .option("-tp, --targetPath <targetPath>", "是否指定本地调试文件路径");
+
+  program
+    .command("init [project name]")
+    .option("-f --force", "是否强制初始化项目")
+    .action(exec);
+
+  // 实现debug模式
+  program.on("option:debug", function () {
+    if (program.debug) {
+      process.env.LOG_LEVEL = "verbose";
+    } else {
+      process.env.LOG_LEVEL = "info";
+    }
+    log.level = process.env.LOG_LEVEL;
+  });
+
+  // 指定targetPath
+  program.on("option:targetPath", function () {
+    process.env.CLI_TARGET_PATH = program.targetPath;
+  });
+
+  // 未知命令监听
+  program.on("command:*", function (obj) {
+    console.log(colors.red("未知的命令" + obj[0]));
+    const availableCommands = program.commands.map((cmd) => cmd.name());
+    if (availableCommands.length > 0) {
+      console.log(colors.red("可用命令：" + availableCommands.join(",")));
+    }
+  });
+
+  program.parse(process.argv);
+
+  if (program.args && program.args.length < 1) {
+    console.log();
+    program.outputHelp();
+    console.log();
   }
 }
 
@@ -34,19 +92,6 @@ async function core() {
  */
 function checkPkgVersion() {
   log.info(pkg.version);
-}
-
-/**
- * 检查node版本号
- */
-function checkNodeVersion() {
-  const currentVersion = process.version;
-  const lowestVersion = constants.LOWEST_NODE_VERSION;
-  if (!semver.gte(currentVersion, lowestVersion)) {
-    throw new Error(
-      colors.red(`需要安装 v${lowestVersion} 以上版本的 node.js`)
-    );
-  }
 }
 
 /**
@@ -66,26 +111,26 @@ function checkUserHome() {
   }
 }
 
-/**
- * 参数解析
- */
-function checkInputArgs() {
-  args = require("minimist")(process.argv.slice(2));
-  checkDebugArgs(args);
-}
+// /**
+//  * 参数解析
+//  */
+// function checkInputArgs() {
+//   args = require("minimist")(process.argv.slice(2));
+//   checkDebugArgs(args);
+// }
 
-/**
- * debug模式启动
- * @param {*} args
- */
-function checkDebugArgs(args) {
-  if (args.debug) {
-    process.env.LOG_LEVEL = "verbose";
-  } else {
-    process.env.LOG_LEVEL = "info";
-  }
-  log.level = process.env.LOG_LEVEL;
-}
+// /**
+//  * debug模式启动
+//  * @param {*} args
+//  */
+// function checkDebugArgs(args) {
+//   if (args.debug) {
+//     process.env.LOG_LEVEL = "verbose";
+//   } else {
+//     process.env.LOG_LEVEL = "info";
+//   }
+//   log.level = process.env.LOG_LEVEL;
+// }
 
 /**
  * 环境变量

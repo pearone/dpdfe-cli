@@ -23,12 +23,13 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@dpd-cli/get-npm-info": "^1.0.1",
-    "@dpd-cli/log": "^1.0.1",
+    "@dpd-cli/get-npm-info": "file:../../utils/get-npm-info",
+    "@dpd-cli/exec": "file:../exec",
+    "@dpd-cli/log": "file:../../utils/log",
     "colors": "^1.4.0",
+    "commander": "^6.2.1",
     "dotenv": "^10.0.0",
     "import-local": "^3.0.3",
-    "minimist": "^1.2.5",
     "npmlog": "^5.0.1",
     "path-exists": "^4.0.0",
     "root-check": "^1.0.0",
