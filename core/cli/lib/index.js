@@ -12,9 +12,9 @@ const userHome = require("user-home");
 const pathExists = require("path-exists").sync;
 const { Command } = require("commander");
 
-const constants = require("../constants");
 const pkg = require("../package.json");
 
+const DEFAULT_CLI_HOME = ".dpd-cli";
 const program = new Command();
 
 async function core() {
@@ -35,7 +35,7 @@ async function prepare() {
   checkUserHome();
   // checkInputArgs();
   checkEnv();
-  // await checkGlobalUpdate();
+  await checkGlobalUpdate();
 }
 
 /**
@@ -157,7 +157,7 @@ function createDefaultEnvConfig() {
   if (process.env.CLI_HOME) {
     tempConfig["cliHome"] = path.join(userHome, process.env.CLI_HOME);
   } else {
-    tempConfig["cliHome"] = path.join(userHome, constants.DEFAULT_CLI_HOME);
+    tempConfig["cliHome"] = path.join(userHome, DEFAULT_CLI_HOME);
   }
   process.env.CLI_HOME_PATH = tempConfig.cliHome;
   return tempConfig;
