@@ -20,7 +20,7 @@ async function exec() {
   const cmdObj = arguments[arguments.length - 1];
   const cmdName = cmdObj.name();
   const packageName = SETTINGS[cmdName];
-  const packageVersion = "2.0.0";
+  const packageVersion = "1.0.3";
 
   if (!targetPath) {
     targetPath = path.resolve(homePath, CACHE_DIR); // 生成缓存路径
