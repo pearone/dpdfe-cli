@@ -7,7 +7,7 @@ const request = require("@dpd-cli/request");
 // };
 
 module.exports = () => {
-  return [
+  return Promise.resolve([
     {
       description: "项目基础模版",
       name: "dpd-cli-template",
@@ -22,5 +22,5 @@ module.exports = () => {
       version: "1.0.0",
       type: "custom",
     },
-  ];
+  ]);
 };

@@ -105,10 +105,10 @@ class InitCommand extends Command {
     let installCmdRet, startCmdRet;
 
     // 依赖安装
-    await this.execCommand(installCommand, "依赖安装失败");
+    // await this.execCommand(installCommand, "依赖安装失败");
 
     // 启动命令执行
-    await this.execCommand(startCommand, "启动命令执行失败");
+    // await this.execCommand(startCommand, "启动命令执行失败");
   }
 
   /**
@@ -262,6 +262,7 @@ class InitCommand extends Command {
 
   async prepare() {
     const template = await getTemplateRequest();
+    console.log(template);
     if (!template || template.length === 0) {
       throw new Error("项目模版不存在");
     }
