@@ -78,6 +78,7 @@ class InitCommand extends Command {
   async installNormalTemplate() {
     log.verbose("安装标准模板");
     log.verbose("templateNpm", this.templateNpm);
+
     // 拷贝模板代码到当前目录
     const spinner = await Spinner({ text: "正在安装模板..." });
     spinner.start();

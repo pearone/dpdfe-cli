@@ -21,13 +21,13 @@ async function exec() {
     const cmdObj = arguments[arguments.length - 1];
     const cmdName = cmdObj.name();
     const packageName = SETTINGS[cmdName];
-    const packageVersion = "1.0.6";
+    const packageVersion = "1.0.7";
 
     if (!targetPath) {
       targetPath = path.resolve(homePath, CACHE_DIR); // 生成缓存路径
       storeDir = path.resolve(targetPath, "node_modules");
       pkg = new Package({ targetPath, storeDir, packageName, packageVersion });
-      console.log(await pkg.exists());
+
       if (await pkg.exists()) {
         await pkg.update();
       } else {
