@@ -107,7 +107,7 @@ class InitCommand extends Command {
     let installCmdRet, startCmdRet;
 
     // 依赖安装
-    // await this.execCommand(installCommand, "依赖安装失败");
+    await this.execCommand(installCommand, "依赖安装失败");
 
     // 启动命令执行
     // await this.execCommand(startCommand, "启动命令执行失败");
