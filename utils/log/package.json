@@ -1,6 +1,6 @@
 {
   "name": "@dpd-cli/log",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "打印日志相关",
   "keywords": [
     "log"

@@ -1,6 +1,6 @@
 {
   "name": "@dpd-cli/init",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "项目、库创建命令",
   "author": "pearone",
   "homepage": "https://github.com/pearone/dpd-cli#readme",

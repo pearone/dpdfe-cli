@@ -1,6 +1,6 @@
 {
   "name": "@dpd-cli/get-npm-info",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "获取npm配置",
   "author": "pearone",
   "homepage": "https://github.com/pearone/dpd-cli#readme",
