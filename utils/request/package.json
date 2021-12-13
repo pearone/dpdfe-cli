@@ -1,7 +1,7 @@
 {
   "name": "@dpd-cli/request",
-  "version": "1.0.2",
-  "description": "request",
+  "version": "1.0.0",
+  "description": "axios request",
   "author": "pearone",
   "homepage": "https://github.com/pearone/dpd-cli#readme",
   "license": "ISC",

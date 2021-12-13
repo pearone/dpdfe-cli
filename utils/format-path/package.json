@@ -1,7 +1,7 @@
 {
   "name": "@dpd-cli/format-path",
-  "version": "1.0.2",
-  "description": "dpd-cli format-path",
+  "version": "1.0.0",
+  "description": "标准化路径",
   "author": "pearone",
   "homepage": "https://github.com/pearone/dpd-cli#readme",
   "license": "ISC",
