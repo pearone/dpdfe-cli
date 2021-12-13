@@ -5,12 +5,12 @@ const fse = require("fs-extra");
 const pkgDir = require("pkg-dir").sync;
 const pathExists = require("path-exists").sync;
 const npminstall = require("npminstall");
-const { isObject } = require("@dpd-cli/utils");
-const formatPath = require("@dpd-cli/format-path");
+const { isObject } = require("@pear-cli/utils");
+const formatPath = require("@pear-cli/format-path");
 const {
   getDefaultRegistry,
   getNpmLatestVersion,
-} = require("@dpd-cli/get-npm-info");
+} = require("@pear-cli/get-npm-info");
 
 class Package {
   constructor(options) {
@@ -28,7 +28,7 @@ class Package {
     this.packageName = options.packageName;
     // package的version
     this.packageVersion = options.packageVersion;
-    // 缓存包名前缀 针对有域名情况下的包名@dpd-cli/init
+    // 缓存包名前缀 针对有域名情况下的包名@pear-cli/init
     this.cacheFilePathPrefix = this.packageName.replace("/", "_");
   }
 

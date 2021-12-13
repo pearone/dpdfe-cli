@@ -6,15 +6,15 @@ const path = require("path");
 
 const semver = require("semver");
 const colors = require("colors/safe");
-const log = require("@dpd-cli/log");
-const exec = require("@dpd-cli/exec");
+const log = require("@pear-cli/log");
+const exec = require("@pear-cli/exec");
 const userHome = require("user-home");
 const pathExists = require("path-exists").sync;
 const { Command } = require("commander");
 
 const pkg = require("../package.json");
 
-const DEFAULT_CLI_HOME = ".dpd-cli";
+const DEFAULT_CLI_HOME = ".pear-cli";
 const program = new Command();
 
 async function core() {
@@ -169,7 +169,7 @@ function createDefaultEnvConfig() {
 async function checkGlobalUpdate() {
   const currentVersion = pkg.version;
   const npmName = pkg.name;
-  const { getNpmSemverVersion } = require("@dpd-cli/get-npm-info");
+  const { getNpmSemverVersion } = require("@pear-cli/get-npm-info");
   const lastestVersion = await getNpmSemverVersion(currentVersion, npmName);
   if (lastestVersion && semver.gt(lastestVersion, currentVersion)) {
     log.warn(

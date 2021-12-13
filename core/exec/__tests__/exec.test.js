@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-const exec = require('..');
+const exec = require("..");
 
-describe('@dpd-cli/exec', () => {
-    it('needs tests');
+describe("@pear-cli/exec", () => {
+  it("needs tests");
 });

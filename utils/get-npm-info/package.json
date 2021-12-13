@@ -1,9 +1,9 @@
 {
-  "name": "@dpd-cli/get-npm-info",
+  "name": "@pear-cli/get-npm-info",
   "version": "1.0.1",
   "description": "获取npm配置",
   "author": "pearone",
-  "homepage": "https://github.com/pearone/dpd-cli#readme",
+  "homepage": "https://github.com/pearone/pear-cli#readme",
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {
@@ -20,11 +20,12 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/pearone/dpd-cli/issues"
+    "url": "https://github.com/pearone/pear-cli/issues"
   },
   "dependencies": {
     "axios": "^0.24.0",
     "semver": "^7.3.5",
     "url-join": "^4.0.1"
-  }
+  },
+  "gitHead": "0e929860f322af9f8acdcabad856c72939791053"
 }

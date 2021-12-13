@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-const utils = require('..');
+const utils = require("..");
 
-describe('@dpd-cli/utils', () => {
-    it('needs tests');
+describe("@pear-cli/utils", () => {
+  it("needs tests");
 });

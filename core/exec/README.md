@@ -1,11 +1,11 @@
-# `@dpd-cli/exec`
+# `@pear-cli/exec`
 
 > TODO: description
 
 ## Usage
 
 ```
-const exec = require('@dpd-cli/exec');
+const exec = require('@pear-cli/exec');
 
 // TODO: DEMONSTRATE API
 ```

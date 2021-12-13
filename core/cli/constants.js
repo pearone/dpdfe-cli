@@ -1,3 +1,3 @@
-const DEFAULT_CLI_HOME = ".dpd-cli";
+const DEFAULT_CLI_HOME = ".pear-cli";
 
 module.exports = { DEFAULT_CLI_HOME };

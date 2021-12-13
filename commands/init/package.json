@@ -1,9 +1,9 @@
 {
-  "name": "@dpd-cli/init",
+  "name": "@pear-cli/init",
   "version": "1.0.1",
   "description": "项目、库创建命令",
   "author": "pearone",
-  "homepage": "https://github.com/pearone/dpd-cli#readme",
+  "homepage": "https://github.com/pearone/pear-cli#readme",
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {
@@ -18,24 +18,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pearone/dpd-cli.git"
+    "url": "git+https://github.com/pearone/pear-cli.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/pearone/dpd-cli/issues"
+    "url": "https://github.com/pearone/pear-cli/issues"
   },
   "dependencies": {
-    "@dpd-cli/command": "file:../../models/command",
-    "@dpd-cli/log": "file:../../utils/log",
-    "@dpd-cli/package": "file:../../models/package",
-    "@dpd-cli/request": "file:../../utils/request",
-    "@dpd-cli/utils": "file:../../utils/utils",
+    "@pear-cli/command": "^1.0.1",
+    "@pear-cli/log": "^1.0.1",
+    "@pear-cli/package": "^1.0.1",
+    "@pear-cli/request": "^1.0.1",
+    "@pear-cli/utils": "^1.0.1",
     "ejs": "^3.1.6",
     "fs-extra": "^10.0.0",
     "inquirer": "^8.2.0",
     "semver": "^7.3.5",
     "user-home": "^3.0.0"
-  }
+  },
+  "gitHead": "0e929860f322af9f8acdcabad856c72939791053"
 }

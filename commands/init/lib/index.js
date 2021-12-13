@@ -6,15 +6,15 @@ const glob = require("glob");
 const ejs = require("ejs");
 const fse = require("fs-extra");
 const inquirer = require("inquirer");
-const log = require("@dpd-cli/log");
+const log = require("@pear-cli/log");
 const userHome = require("user-home");
 const semver = require("semver");
-const Command = require("@dpd-cli/command");
-const Package = require("@dpd-cli/package");
-const { Spinner, sleep, spawnAsync } = require("@dpd-cli/utils");
+const Command = require("@pear-cli/command");
+const Package = require("@pear-cli/package");
+const { Spinner, sleep, spawnAsync } = require("@pear-cli/utils");
 const getTemplateRequest = require("./get-template-request");
 
-const DEFAULT_CLI_HOME = ".dpd-cli";
+const DEFAULT_CLI_HOME = ".pear-cli";
 
 const TYPE_PROJECT = "project";
 const TYPE_COMPONENT = "component";

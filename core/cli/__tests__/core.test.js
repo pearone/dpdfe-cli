@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-const core = require('..');
+const core = require("..");
 
-describe('@dpd-cli/core', () => {
-    it('needs tests');
+describe("@pear-cli/core", () => {
+  it("needs tests");
 });

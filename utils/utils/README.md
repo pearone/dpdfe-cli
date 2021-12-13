@@ -1,11 +1,11 @@
-# `@dpd-cli/utils`
+# `@pear-cli/utils`
 
 > TODO: description
 
 ## Usage
 
 ```
-const utils = require('@dpd-cli/utils');
+const utils = require('@pear-cli/utils');
 
 // TODO: DEMONSTRATE API
 ```

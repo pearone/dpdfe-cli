@@ -1,13 +1,13 @@
 {
-  "name": "@dpd-cli/core",
+  "name": "@pear-cli/core",
   "version": "1.0.1",
   "description": "脚手架",
   "author": "pearone",
-  "homepage": "https://github.com/pearone/dpd-cli#readme",
+  "homepage": "https://github.com/pearone/pear-cli#readme",
   "license": "ISC",
   "main": "lib/core.js",
   "bin": {
-    "dpd-cli": "bin/index.js"
+    "pear-cli": "bin/index.js"
   },
   "directories": {
     "lib": "lib",
@@ -23,9 +23,9 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@dpd-cli/exec": "file:../exec",
-    "@dpd-cli/get-npm-info": "file:../../utils/get-npm-info",
-    "@dpd-cli/log": "file:../../utils/log",
+    "@pear-cli/exec": "^1.0.1",
+    "@pear-cli/get-npm-info": "^1.0.1",
+    "@pear-cli/log": "^1.0.1",
     "colors": "^1.4.0",
     "commander": "^6.2.1",
     "dotenv": "^10.0.0",
@@ -35,5 +35,6 @@
     "root-check": "^1.0.0",
     "semver": "^7.3.5",
     "user-home": "^3.0.0"
-  }
+  },
+  "gitHead": "0e929860f322af9f8acdcabad856c72939791053"
 }

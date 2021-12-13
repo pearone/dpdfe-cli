@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-const log = require('..');
+const log = require("..");
 
-describe('@dpd-cli/log', () => {
-    it('needs tests');
+describe("@pear-cli/log", () => {
+  it("needs tests");
 });

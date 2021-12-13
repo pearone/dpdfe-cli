@@ -1,11 +1,11 @@
-# `@dpd-cli/format-path`
+# `@pear-cli/format-path`
 
 > TODO: description
 
 ## Usage
 
 ```
-const formatPath = require('@dpd-cli/format-path');
+const formatPath = require('@pear-cli/format-path');
 
 // TODO: DEMONSTRATE API
 ```

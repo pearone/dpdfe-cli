@@ -1,9 +1,9 @@
 {
-  "name": "@dpd-cli/command",
+  "name": "@pear-cli/command",
   "version": "1.0.1",
-  "description": "dpd-cli command",
+  "description": "pear-cli command",
   "author": "pearone <1181019452@qq.com>",
-  "homepage": "https://github.com/pearone/dpd-cli#readme",
+  "homepage": "https://github.com/pearone/pear-cli#readme",
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {
@@ -18,17 +18,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pearone/dpd-cli.git"
+    "url": "git+https://github.com/pearone/pear-cli.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/pearone/dpd-cli/issues"
+    "url": "https://github.com/pearone/pear-cli/issues"
   },
   "dependencies": {
-    "@dpd-cli/log": "file:../../utils/log",
+    "@pear-cli/log": "^1.0.1",
     "colors": "^1.4.0",
     "semver": "^7.3.5"
-  }
+  },
+  "gitHead": "0e929860f322af9f8acdcabad856c72939791053"
 }

@@ -1,4 +1,4 @@
-const request = require("@dpd-cli/request");
+const request = require("@pear-cli/request");
 
 // module.exports = () => {
 //   return request({

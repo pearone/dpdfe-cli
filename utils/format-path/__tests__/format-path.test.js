@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-const formatPath = require('..');
+const formatPath = require("..");
 
-describe('@dpd-cli/format-path', () => {
-    it('needs tests');
+describe("@pear-cli/format-path", () => {
+  it("needs tests");
 });

@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-const request = require('..');
+const request = require("..");
 
-describe('@dpd-cli/request', () => {
-    it('needs tests');
+describe("@pear-cli/request", () => {
+  it("needs tests");
 });

@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-const init = require('..');
+const init = require("..");
 
-describe('@dpd-cli/init', () => {
-    it('needs tests');
+describe("@pear-cli/init", () => {
+  it("needs tests");
 });

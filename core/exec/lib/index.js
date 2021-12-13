@@ -1,12 +1,12 @@
 "use strict";
 
 const path = require("path");
-const { spawn } = require("@dpd-cli/utils");
-const Package = require("@dpd-cli/package");
-const log = require("@dpd-cli/log");
+const { spawn } = require("@pear-cli/utils");
+const Package = require("@pear-cli/package");
+const log = require("@pear-cli/log");
 
 const CACHE_DIR = "dependences";
-const SETTINGS = { init: "@dpd-cli/init" };
+const SETTINGS = { init: "@pear-cli/init" };
 
 async function exec() {
   try {

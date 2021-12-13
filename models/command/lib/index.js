@@ -4,7 +4,7 @@ const LOWEST_NODE_VERSION = "12.0.0";
 
 const semver = require("semver");
 const colors = require("colors/safe");
-const log = require("@dpd-cli/log");
+const log = require("@pear-cli/log");
 
 class Command {
   constructor(argv) {

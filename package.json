@@ -1,5 +1,5 @@
 {
-  "name": "dpd-cli",
+  "name": "pear-cli",
   "version": "1.0.0",
   "directories": {
     "lib": "lib"

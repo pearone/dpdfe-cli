@@ -1,5 +1,5 @@
 {
-  "name": "@dpd-cli/utils",
+  "name": "@pear-cli/utils",
   "version": "1.0.1",
   "description": "工具包",
   "author": "pearone",
@@ -19,7 +19,7 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "gitHead": "5a16538c0a8c7638afabd5c18db12e60a6969279",
+  "gitHead": "0e929860f322af9f8acdcabad856c72939791053",
   "dependencies": {
     "ora": "^5.4.1"
   }
