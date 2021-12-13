@@ -3,6 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 const glob = require("glob");
+const ejs = require("ejs");
 const fse = require("fs-extra");
 const inquirer = require("inquirer");
 const log = require("@dpd-cli/log");
