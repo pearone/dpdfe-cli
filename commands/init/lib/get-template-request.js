@@ -12,15 +12,9 @@ module.exports = () => {
       description: "项目基础模版",
       name: "dpd-cli-template",
       version: "1.0.0",
-      type: "normal",
+      type: "normal", // normal、custom
       installCommand: "npm install",
       startCommand: "npm run dev",
-    },
-    {
-      description: "管理后台模版",
-      name: "dpd-cli-template",
-      version: "1.0.0",
-      type: "custom",
     },
   ]);
 };

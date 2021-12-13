@@ -174,7 +174,7 @@ class InitCommand extends Command {
                       reject2(err);
                     }
 
-                    fsExtra.writeFileSync(filePath, result);
+                    fse.writeFileSync(filePath, result);
                     resolve2(result);
                   }
                 );
@@ -264,7 +264,7 @@ class InitCommand extends Command {
 
   async prepare() {
     const template = await getTemplateRequest();
-    console.log(template);
+
     if (!template || template.length === 0) {
       throw new Error("项目模版不存在");
     }
